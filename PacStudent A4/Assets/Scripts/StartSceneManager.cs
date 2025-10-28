@@ -7,7 +7,7 @@ public class StartSceneManager : MonoBehaviour
 {
     public void LoadLevel1()
     {
-        SceneManager.LoadScene("PlaceHolderScene");
+        SceneManager.LoadScene("GameScene");
     }
 
     public void LoadLevel2()
