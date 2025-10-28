@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartSceneController : MonoBehaviour
+public class StartSceneManager : MonoBehaviour
 {
     public void LoadLevel1()
     {
