@@ -9,7 +9,7 @@ public class CherryController : MonoBehaviour
     public float spawnDelay = 5f;
     public Vector2 moveDirection;
     public float offscreenDistance = 20f;
-    public float mapWidth = 46f;
+    public float mapWidth = 15f;
     public float mapHeight = 19f;
 
     private Vector3 startPos;
@@ -42,11 +42,11 @@ public class CherryController : MonoBehaviour
                 endPos = new Vector3(-mapWidth / 2 - offscreenDistance, startPos.y, 0);
                 break;
             case 2:
-                startPos = new Vector3(Random.Range(-mapWidth / 4, mapWidth / 4), mapHeight / 2 + offscreenDistance, 0);
+                startPos = new Vector3(Random.Range(-mapWidth / 2, mapWidth / 2), mapHeight / 2 + offscreenDistance, 0);
                 endPos = new Vector3(startPos.x, -mapHeight / 2 - offscreenDistance, 0);
                 break;
             case 3:
-                startPos = new Vector3(Random.Range(-mapWidth / 4, mapWidth / 4), -mapHeight / 2 - offscreenDistance, 0);
+                startPos = new Vector3(Random.Range(-mapWidth / 2, mapWidth / 2), -mapHeight / 2 - offscreenDistance, 0);
                 endPos = new Vector3(startPos.x, mapHeight / 2 + offscreenDistance, 0);
                 break;
         }

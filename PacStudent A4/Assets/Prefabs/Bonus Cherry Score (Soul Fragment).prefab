@@ -104,5 +104,5 @@ MonoBehaviour:
   spawnDelay: 5
   moveDirection: {x: 0, y: 0}
   offscreenDistance: 10
-  mapWidth: 46
+  mapWidth: 15
   mapHeight: 19

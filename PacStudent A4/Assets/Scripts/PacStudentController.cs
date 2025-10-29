@@ -26,11 +26,9 @@ public class PacStudentController : MonoBehaviour
         RIGHT,
         UP,
         DOWN,
-        IDLE
     }
 
-    private AnimState currentState = AnimState.IDLE;
-    // Start is called before the first frame update
+    private AnimState currentState = AnimState.RIGHT;
     void Start()
     {
         Vector3 pos = transform.position;
@@ -44,7 +42,6 @@ public class PacStudentController : MonoBehaviour
         animator.speed = 0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         HandleInput();
@@ -85,11 +82,6 @@ public class PacStudentController : MonoBehaviour
         }
         else
         {
-            if (currentState != AnimState.IDLE)
-            {
-                currentState = AnimState.IDLE;
-                animator.SetTrigger("Idle");
-            }
             animator.speed = 0f;
         }
     }
@@ -178,9 +170,6 @@ public class PacStudentController : MonoBehaviour
                 break;
             case AnimState.DOWN:
                 animator.SetTrigger("Down");
-                break;
-            default:
-                animator.SetTrigger("Idle");
                 break;
         }
     }
